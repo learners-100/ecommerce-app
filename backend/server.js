@@ -22,4 +22,5 @@ app.get('/', (req, res) => {
   res.send('API is running...');
 });
 
-app.listen(process.env.PORT, () => console.log('Server started'));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
